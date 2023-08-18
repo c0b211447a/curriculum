@@ -29,6 +29,17 @@
                     </div>
                 @endforeach
             </div>
+            <br>
+            <br>
+            <div>
+                @foreach($questions as $question)
+                    <div>
+                        <a href="https://teratail.com/questions/{{ $question['id'] }}">
+                            {{ $question['title'] }}
+                        </a>
+                    </div>
+                @endforeach
+            </div>
             <div class="authenticated_user">
                 <p class"authenticated_user_name">ログインユーザー：{{ Auth::user()->name }}</p>
             </div>
